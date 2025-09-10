@@ -29,3 +29,8 @@ If you manually switch to a different parent and actually want the inheritance, 
 
 ### a change
 V1.1
+
+
+### where stoped
+	https://www.youtube.com/watch?v=oGhc5Z-WJSw
+		5:05

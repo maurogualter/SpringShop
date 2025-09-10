@@ -27,6 +27,7 @@
 		<url/>
 	</scm>
 	<properties>
+		<modelmapper-spring-version>2.4.4</modelmapper-spring-version>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
@@ -57,6 +58,16 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+		  <groupId>org.modelmapper.extensions</groupId>
+		  <artifactId>modelmapper-spring</artifactId>
+		  <version>${modelmapper-spring-version}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.springdoc</groupId>
+		  <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+		  <version>2.8.13</version>
 		</dependency>
 	</dependencies>
 
