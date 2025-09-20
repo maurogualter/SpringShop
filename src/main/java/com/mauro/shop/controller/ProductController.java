@@ -76,7 +76,7 @@ public class ProductController {
 		}
 	}
 	
-	@PutMapping("product/{productId}/update")
+	@PutMapping("/product/{productId}/update")
 	public ResponseEntity<ApiResponse> updateProduct (@RequestBody ProductUpdateRequest request, @PathVariable Long productId){
 		try{
 			Product TheProduct  = productService.updateProduct(request, productId);

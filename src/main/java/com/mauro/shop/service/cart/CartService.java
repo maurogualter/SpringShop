@@ -1,6 +1,7 @@
 package com.mauro.shop.service.cart;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.stereotype.Service;
@@ -23,7 +24,7 @@ public class CartService implements ICartService {
 	@Override
 	public Cart getCart(Long id) {
 		Cart cart = cartRepository.findById(id)
-				.orElseThrow(()-> new ResourceNotFoundException("Cart not fond"));
+				.orElseThrow(()-> new ResourceNotFoundException("Cart not found"));
 		BigDecimal totalAmount = cart.getTotalAmount();
         cart.setTotalAmount(totalAmount);
         return cartRepository.save(cart);
@@ -52,6 +53,12 @@ public class CartService implements ICartService {
 		//Long NewCartId = cartIdGenerator.incrementAndGet();
 		//newCart.setId(NewCartId);
 		return cartRepository.save(newCart).getId();
+	}
+
+	@Override
+	public Cart getCartByUserId(Long userId) {
+		return cartRepository.findByUserId(userId)
+				.orElseThrow(()-> new ResourceNotFoundException("Cart not found"));
 	}
 
 }

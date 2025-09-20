@@ -33,4 +33,4 @@ V1.1
 
 ### where stoped
 	https://www.youtube.com/watch?v=oGhc5Z-WJSw
-		5:05
+		5:50
